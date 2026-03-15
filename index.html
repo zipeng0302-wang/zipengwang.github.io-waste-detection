@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVision - AI Waste Classification System</title>
+    
+    <!-- External CSS: Linking to your custom style.css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Using Tailwind CSS for layout utility (Optional but recommended for modern UI) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-emerald-50 text-slate-800 font-['Plus_Jakarta_Sans']">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-emerald-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="bg-emerald-500 p-2 rounded-lg text-white">
+                    <i class="fas fa-leaf text-xl"></i>
+                </div>
+                <span class="text-2xl font-extrabold text-emerald-900 tracking-tight">EcoVision</span>
+            </a>
+
+            <!-- Menu Links -->
+            <div class="hidden md:flex space-x-8 font-semibold text-slate-600">
+                <a href="index.html" class="text-emerald-600">Home</a>
+                <a href="detect.html" class="hover:text-emerald-600 transition">AI Detector</a>
+                <a href="#" class="hover:text-emerald-600 transition">Guidelines</a>
+            </div>
+
+            <!-- Call to Action -->
+            <a href="detect.html" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition shadow-lg shadow-emerald-200">
+                Start Sorting
+            </a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Hero Text Content -->
+            <div class="space-y-8 text-center lg:text-left">
+                <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
+                    Revolutionizing Recycling
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1]">
+                    Make Our Planet <br>
+                    <span class="text-emerald-600">Greener</span> with AI.
+                </h1>
+                <p class="text-lg text-slate-500 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    Identify waste categories instantly using our advanced AI detection lab. 
+                    Together, we can reduce landfill waste and improve recycling efficiency.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <a href="detect.html" class="bg-emerald-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition flex items-center space-x-2">
+                        <span>Launch Detector</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <button class="bg-white border border-emerald-200 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-50 transition">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Visual Area -->
+            <div class="relative">
+                <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=1000" alt="Recycling Concept" class="w-full h-auto">
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 animate-bounce">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-check-circle text-emerald-500 text-2xl"></i>
+                        <div>
+                            <p class="text-xs text-slate-400 font-bold uppercase">Accuracy</p>
+                            <p class="text-xl font-black">98.5%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES OVERVIEW -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-3xl bg-emerald-50 hover:bg-emerald-100 transition">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm mb-6">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Instant Analysis</h3>
+                    <p class="text-slate-500">Our neural network processes your images in less than 0.5 seconds.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-3xl bg-emerald-50 hover:bg-emerald-100 transition">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm mb-6">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Smart Classification</h3>
+                    <p class="text-slate-500">Trained on millions of samples to recognize over 150 waste types.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-3xl bg-emerald-50 hover:bg-emerald-100 transition">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm mb-6">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile Ready</h3>
+                    <p class="text-slate-500">Use it on your phone right at the recycling bin for instant help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-emerald-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-400 font-medium">© 2026 EcoVision Project. Keeping the Earth Clean.</p>
+        </div>
+    </footer>
+
+    <!-- EXTERNAL SCRIPTS: Linking to your custom upload.js -->
+    <!-- (Optional: Only if you need global logic on index.html) -->
+    <script src="js/upload.js"></script>
+
+</body>
+</html>

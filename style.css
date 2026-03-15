@@ -1,0 +1,124 @@
+/* ECOVISION CUSTOM STYLES 
+  This file handles the premium visual effects and animations 
+  that complement the Tailwind CSS framework used in index.html.
+*/
+
+:root {
+    --eco-green: #10b981;
+    --eco-dark: #064e3b;
+    --eco-light: #f0fdf4;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Base Styles --- */
+body {
+    background: linear-gradient(135deg, var(--eco-light) 0%, #dcfce7 100%);
+    min-height: 100vh;
+}
+
+/* --- Glassmorphism UI Components --- */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Support for Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+}
+
+/* --- Interactive Elements --- */
+.drop-zone {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px dashed var(--eco-green);
+    position: relative;
+    cursor: pointer;
+}
+
+.drop-zone.active {
+    background: rgba(16, 185, 129, 0.1);
+    transform: scale(1.01);
+    border-style: solid;
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.2);
+}
+
+/* --- Custom Animations --- */
+
+/* Page Transitions */
+.page {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* AI Scanner Effect */
+.scanning-line {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--eco-green), transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px var(--eco-green);
+    animation: scan 2.5s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes scan {
+    0% { top: 0%; }
+    50% { top: 100%; }
+    100% { top: 0%; }
+}
+
+/* Result Card Entry */
+.result-card {
+    animation: slideInRight 0.4s ease-out;
+}
+
+@keyframes slideInRight {
+    from { 
+        opacity: 0; 
+        transform: translateX(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+/* --- Scrollbar Styling --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--eco-green);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--eco-dark);
+}
+
+/* --- Utility Classes --- */
+.text-gradient {
+    background: linear-gradient(90deg, #10b981, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.shadow-premium {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+}
